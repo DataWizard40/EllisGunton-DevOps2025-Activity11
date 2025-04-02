@@ -15,12 +15,12 @@ public class TelephoneChecker {
 	public boolean verifyNumber(long number) {
 		if (number < 1000000L) {
 			return false;
-		} else if (number < 9999999L) {
+		} else if (number <= 9999999L) {
 			return false;
 		} else if (number < 1000000000L) {
 			return false;
 		} else {
-			return number < 9999999999L;
+			return number <= 9999999999L;
 		} 
 	}
 	
