@@ -28,7 +28,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Verify with Maven
-      run: 
+      run: |
        echo TESTING JUnit Sample Project
        cd 'code/JUnit Sample'
        man --batch-mode --update-snapshots clean verify
