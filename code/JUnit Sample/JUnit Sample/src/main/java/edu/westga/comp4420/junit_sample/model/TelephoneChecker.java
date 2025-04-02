@@ -63,5 +63,4 @@ public class TelephoneChecker {
 		}
 		return false;
 	}
-	}
 }
