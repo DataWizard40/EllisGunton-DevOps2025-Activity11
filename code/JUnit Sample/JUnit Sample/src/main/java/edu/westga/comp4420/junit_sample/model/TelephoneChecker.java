@@ -42,6 +42,26 @@ public class TelephoneChecker {
 	 * 			false	if number does not match heuristics for potential spam
 	 */
 	public boolean identifySpam(long number) {
+		if (!this.verifyNumber(number)) {
+			throw new IllegalArgumentException("invalid phone number");
+		}
+		if (String.valueOf(number).length() == 7) {
+			return false;
+		}
+		if (String.valueOf(number).substring(0, 3).equals("999")) {
+			return true;
+		} else if (String.valueOf(number).substring(0, 3).equals("900")) {
+			return true;
+		} else if (String.valueOf(number).substring(0, 3).equals("888")) {
+			return true;
+		} else if (String.valueOf(number).substring(0, 3).equals("800")) {
+			return true;
+		} else if (String.valueOf(number).substring(0, 3).equals("911")) {
+			return true;
+		} else if (String.valueOf(number).substring(0, 3).equals("411")) {
+			return true;
+		}
 		return false;
+	}
 	}
 }
