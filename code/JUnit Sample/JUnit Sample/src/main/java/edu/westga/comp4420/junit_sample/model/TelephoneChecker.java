@@ -16,7 +16,7 @@ public class TelephoneChecker {
 		if (number < 1000000L) {
 			return false;
 		} else if (number <= 9999999L) {
-			return false;
+			return true;
 		} else if (number < 1000000000L) {
 			return false;
 		} else {
